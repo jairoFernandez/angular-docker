@@ -1,0 +1,10 @@
+web:
+    build: .
+    ports:
+        - '4200:4200'
+        - '49153:49153'
+    volumes:
+        - .:/usr/src/app/
+    environment:
+        - NODE_ENV=dev
+    command: bash -c "npm start"
